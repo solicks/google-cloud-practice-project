@@ -1,0 +1,78 @@
+##  Infrastructure Preview
+
+#  Task 1: Use Marketplace to build a deployment
+
+    Google Cloud Practice Project
+
+     1. In the Cloud Console, on the Navigation menu (7a91d354499ac9f1.png), click Marketplace.
+
+     2. Locate the Jenkins deployment by searching for Jenkins Certified by Bitnami.
+
+     3. Click on the deployment and read about the service provided by the software.
+
+
+    Launch Jenkins
+
+     1. Click Launch.
+
+     2. Verify the deployment, accept the terms and services and click Deploy.
+
+     3. Click Close on the Welcome to Deployment Manager window.
+
+
+#  Task 2: Examine the deployment   
+    
+    View installed software and login to Jenkins
+     
+     1. In the right pane, click More about the software to view additional software details. Look at all the software that was installed.
+
+     2. Copy the Admin user and Admin password values to a text editor.
+
+     3. Click Visit the site to view the site in another browser tab. If you get an error, you might have to reload the page a couple of times.
+
+     4. Log in with the Admin user and Admin password values.
+
+     5. After logging in, you will be asked to Customize Jenkins. Click Install suggested plugins, and then click Restart after the installation is complete. The restart will take a couple of minutes.
+
+    
+    Explore Jenkins
+
+     1. In the Jenkins interface, in the left pane, click Manage Jenkins. Look at all of the actions available. 
+        You are now prepared to manage Jenkins. 
+        The focus of this lab is Google Cloud infrastructure, not Jenkins management, 
+        so seeing that this menu is available is the purpose of this step.
+
+    2. Leave the browser window open to the Jenkins service. You will use it in the next task.
+
+
+#  Task 3: Administer the service
+
+     View the deployment and SSH to the VM
+      
+      1. In the Cloud Console, on the Navigation menu, click Deployment Manager.
+
+      2. Click jenkins-1.
+
+      3. Click SSH to connect to the Jenkins server.
+
+    Shut down and restart the services
+
+     1. In the SSH window, enter the following command to shut down all the running services:
+          sudo /opt/bitnami/ctlscript.sh stop
+
+     2. Refresh the browser window for the Jenkins UI. You will no longer see the Jenkins interface because the service was shut down.
+
+     3. In the SSH window, enter the following command to restart the services:
+          sudo /opt/bitnami/ctlscript.sh restart
+
+     4. Return to the browser window for the Jenkins UI and refresh it. You may have to do it a couple of times before the service is reachable.
+
+     5. In the SSH window, type exit to close the SSH terminal session.
+
+
+##  Task 4: Review
+
+##  End Task
+
+
+   
